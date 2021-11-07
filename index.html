@@ -69,6 +69,11 @@
         toast.show()
       }
       moneyElem.innerHTML = person.money
+      if (location.search == "?tab=shop") {
+          var shopTabEl = document.querySelector('#nav-shop-tab')
+          var shopTab = new bootstrap.Tab(someTabTriggerEl)
+          shopTab.show()
+      }
     </script>
   </body>
 </html>
