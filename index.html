@@ -23,6 +23,7 @@
         <ul>
           <li><a href="#pizza">Pizza</a></li>
           <li><a href="#boombox">Boombox</a></li>
+          <li><a href="#pascals-triangle">Pascal's Triangle</a></li>
         </ul>
         <pre style="color: brown" id="pizza">
 |++++++++++++++++++++++|
@@ -56,7 +57,7 @@
         <p class="lead">Boombox</p>
         <p>A fancy boombox that can play over 1 times 10 to the power of 10 to the power of 10 to the power of 10 to the power of 10 to the power of 10 to the power of ... 10 to the power of 10 songs. (Yes, I used scientific notation and that sounds way more confusing. And yes, the word is _ _ _ _ _ _ _ _. Because I erased it, then you will never figure it out. Mwahahahahahahaha! Actually, I think we should move on.) And the volume can range from 0% to 100%, just like a normal boombox.</p>
         
-        <pre>
+        <pre id="pascals-triangle">
         1
       1   1
     1   2   1
@@ -127,6 +128,12 @@
           var shopTab = new bootstrap.Tab(shopTabEl)
           shopTab.show()
       }
+      setInterval(function() {
+        var list = ["red", "orange", "yellow", "green", "blue", "purple", "gold", "silver", "black", "gray", "white"]
+        var num = Math.floor((Math.random())*11)
+        var color = list[num]
+        document.querySelector("#pascals-triangle").style.color = color
+      }, 250)
     </script>
   </body>
 </html>
